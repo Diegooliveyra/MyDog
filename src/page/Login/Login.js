@@ -1,7 +1,12 @@
 import React from 'react';
+import * as S from './style';
 
 const Login = () => {
-  return <div>Login</div>;
+  return (
+    <S.login>
+      <S.form>form</S.form>
+    </S.login>
+  );
 };
 
 export default Login;

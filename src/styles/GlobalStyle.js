@@ -3,6 +3,8 @@ import styled, { createGlobalStyle } from 'styled-components';
 export default createGlobalStyle`
   * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 
   ::root {
@@ -11,17 +13,16 @@ export default createGlobalStyle`
   }
 
   body {
-    margin: 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
     font-family: "Roboto";
   }
-  h1, h2, h3, h4, p {
-    margin: 0;
-  }
+ 
   
   ul, li {
     list-style: none;
-    padding: 0;
-    margin: 0;
   }
   img {
     display: block;
