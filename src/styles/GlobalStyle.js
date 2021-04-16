@@ -42,7 +42,7 @@ export default createGlobalStyle`
 `;
 
 export const Container = styled.div`
-  max-width: 50rem;
+  max-width: 60rem;
   padding: 0 1rem;
   margin: 0 auto;
 `;
