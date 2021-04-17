@@ -4,15 +4,19 @@ import Home from './Home/Home';
 import Login from './Login/Login';
 
 import GlobalStyle from './../styles/GlobalStyle';
+import ProtectedRoute from '../components/helper/ProtectRoute';
+import { UserProvider } from '../UserContext';
 
 function Root() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
-      <GlobalStyle />
+      <UserProvider>
+        <Routes>
+          <ProtectedRoute path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+        <GlobalStyle />
+      </UserProvider>
     </BrowserRouter>
   );
 }

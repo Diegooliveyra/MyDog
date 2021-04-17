@@ -3,6 +3,7 @@ import * as S from './style';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 import dog from '../../assets/dog.png';
 import Input from '../../components/Input/Input';
+import Button from '../../components/buttons/Button';
 
 const Login = () => {
   return (
@@ -10,16 +11,22 @@ const Login = () => {
       <S.form>
         <Logo />
         <form action="">
-          <Input type="text" name="name" placeholder="Username or e-mail" />
-          <Input type="password" name="name" placeholder="Password" />
-          <button>Login</button>
+          <Input
+            type="text"
+            name="username"
+            placeholder="Username or e-mail"
+            primary
+          />
+          <Input type="password" name="password" placeholder="Password" />
+          <Button>Login</Button>
           <p>
-            Don’t have an account yet ?<a href="/">Sign up!</a>
+            Don’t have an account yet ?<a href="/"> Sign up!</a>
           </p>
         </form>
-        <div>
+        <S.wrapperImage>
+          <span></span>
           <img src={dog} alt="" />
-        </div>
+        </S.wrapperImage>
       </S.form>
     </S.login>
   );

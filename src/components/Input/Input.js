@@ -1,13 +1,15 @@
 import React from 'react';
-import { InputStyled } from './style';
+import { InputStyled, LabelIcon } from './style';
 
-const Input = ({ type, name, placeholder }) => {
+const Input = ({ type, name, placeholder, ...props }) => {
   return (
-    <InputStyled
-      type={type}
-      name={name}
-      placeholder={placeholder}
-    ></InputStyled>
+    <LabelIcon {...props}>
+      <InputStyled
+        type={type}
+        name={name}
+        placeholder={placeholder}
+      ></InputStyled>
+    </LabelIcon>
   );
 };
 
