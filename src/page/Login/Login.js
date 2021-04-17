@@ -4,13 +4,14 @@ import { ReactComponent as Logo } from '../../assets/logo.svg';
 import dog from '../../assets/dog.png';
 import Input from '../../components/Input/Input';
 import Button from '../../components/buttons/Button';
+import { Navigate } from 'react-router';
 
 const Login = () => {
   return (
     <S.login>
       <S.form>
         <Logo />
-        <form action="">
+        <form action="/">
           <Input
             type="text"
             name="username"

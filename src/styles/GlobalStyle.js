@@ -18,6 +18,7 @@ export default createGlobalStyle`
     align-items: center;
     height: 100vh;
     font-family: "Roboto";
+    color: var(----black-color);
 
     @media(max-width: 40rem) {
       display: block

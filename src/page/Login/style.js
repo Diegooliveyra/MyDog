@@ -6,7 +6,7 @@ export const login = styled.section`
   display: grid;
   grid-template-columns: 400px 400px;
   box-shadow: 0px 10px 20px 4px rgba(0, 0, 0, 0.1);
-
+  min-height: 657px;
   ::before {
     display: block;
     min-width: 345px;
