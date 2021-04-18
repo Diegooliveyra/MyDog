@@ -9,6 +9,9 @@ import medical from '../../assets/medical.svg';
 import calendar from '../../assets/calendar.svg';
 import pata_branca from '../../assets/pata_branca.svg';
 import vacina from '../../assets/vacina.svg';
+import home from '../../assets/home.svg';
+import notification from '../../assets/notification.svg';
+import settings from '../../assets/settings.svg';
 
 const Home = () => {
   return (
@@ -60,6 +63,25 @@ const Home = () => {
             <p>Medical record</p>
           </S.CardInformation>
         </S.MainInformation>
+        <S.Navbar>
+          <ul>
+            <li>
+              <a href="/" className="active">
+                <img src={home} alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="/">
+                <img src={notification} alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="/">
+                <img src={settings} alt="" />
+              </a>
+            </li>
+          </ul>
+        </S.Navbar>
       </S.Content>
     </S.HomeStyle>
   );

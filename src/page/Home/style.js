@@ -28,9 +28,9 @@ export const Content = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  padding: 2rem 2rem;
+  padding: 1rem 2rem;
 
   @media (max-width: 40rem) {
     padding: 2rem 1rem;
@@ -79,7 +79,7 @@ export const MainInformation = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 `;
 
 export const CardInformation = styled.div`
@@ -102,5 +102,25 @@ export const CardInformation = styled.div`
   p {
     font-size: 14px;
     max-width: 80px;
+  }
+`;
+
+export const Navbar = styled.div`
+  width: 100%;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  ul li a {
+    display: block;
+    padding: 0.8rem 2rem;
+    border-radius: 10px;
+  }
+
+  ul li a.active {
+    background-color: #797979;
   }
 `;
