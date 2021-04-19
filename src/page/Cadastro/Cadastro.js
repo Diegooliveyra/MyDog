@@ -6,32 +6,19 @@ import Input from '../../components/Input/Input';
 import Button from '../../components/buttons/Button';
 import { useNavigate } from 'react-router';
 import { UserContext } from '../../UserContext';
+import useLocalStorage from '../../hooks/useLocalStorage';
 
 const Login = () => {
   const [user, setUser] = useState({ username: '', password: '' });
-
+  const { setToken } = useContext(UserContext);
+  const [produto, setProduto] = useLocalStorage('token', '');
   const navigate = useNavigate();
-  const { token, setToken } = useContext(UserContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(token);
-    if (token) {
-      validation();
-    }
-  };
-
-  const validation = () => {
-    const userToken = window.localStorage.getItem('token');
-    const userData = JSON.parse(userToken);
-    console.log(userData);
-    if (
-      user.username === userData.username &&
-      user.password === userData.password
-    ) {
-      setToken(true);
-      navigate('/');
-    }
+    const userToken = JSON.stringify(user);
+    setProduto(userToken);
+    setToken(true);
   };
 
   const onChange = ({ target }) => {
@@ -57,9 +44,10 @@ const Login = () => {
             placeholder="Password"
             onChange={onChange}
           />
-          <Button>Login</Button>
+          <Button>Create an account</Button>
           <p>
-            Don’t have an account yet ?<a href="/cadastro"> Sign up!</a>
+            Do you already have an account?
+            <a href="/login"> Sign in!</a>
           </p>
         </form>
         <S.wrapperImage>
