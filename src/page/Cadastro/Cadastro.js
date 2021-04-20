@@ -16,8 +16,9 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const userToken = JSON.stringify(user);
-    setProduto(userToken);
+    window.localStorage.removeItem('token');
+    setProduto(JSON.stringify(user));
+    navigate('/');
     setToken(true);
   };
 
