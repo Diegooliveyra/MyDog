@@ -15,7 +15,6 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(token);
     if (token) {
       validation();
     }
@@ -24,7 +23,7 @@ const Login = () => {
   const validation = () => {
     const userToken = window.localStorage.getItem('token');
     const userData = JSON.parse(userToken);
-    console.log(userData);
+
     if (
       user.username === userData.username &&
       user.password === userData.password

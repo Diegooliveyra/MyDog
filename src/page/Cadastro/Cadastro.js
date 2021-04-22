@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import * as S from './style';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 import dog from '../../assets/dog.png';
@@ -12,13 +12,11 @@ const Login = () => {
   const [user, setUser] = useState({ username: '', password: '' });
   const { setToken } = useContext(UserContext);
   const [produto, setProduto] = useLocalStorage('token', '');
-  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    window.localStorage.removeItem('token');
+    setProduto('token', '');
     setProduto(JSON.stringify(user));
-    navigate('/');
     setToken(true);
   };
 
