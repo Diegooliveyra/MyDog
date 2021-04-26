@@ -1,10 +1,8 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import * as S from './style';
-import { ReactComponent as Logo } from '../../assets/logo.svg';
 import dog from '../../assets/dog.png';
 import Input from '../../components/Input/Input';
 import Button from '../../components/buttons/Button';
-import { useNavigate } from 'react-router';
 import { UserContext } from '../../UserContext';
 import useLocalStorage from '../../hooks/useLocalStorage';
 
@@ -28,25 +26,24 @@ const Login = () => {
   return (
     <S.login>
       <S.form>
-        <Logo />
+        <h1> Cadastre-se</h1>
         <form onSubmit={handleSubmit}>
           <Input
             type="text"
             name="username"
-            placeholder="Username or e-mail"
+            placeholder="Usuario ou Email"
             primary
             onChange={onChange}
           />
           <Input
             type="password"
             name="password"
-            placeholder="Password"
+            placeholder="Senha"
             onChange={onChange}
           />
-          <Button>Create an account</Button>
+          <Button>Criar um Conta</Button>
           <p>
-            Do you already have an account?
-            <a href="/login"> Sign in!</a>
+            Você ja tem uma conta ?<a href="/login"> Faça o Login</a>
           </p>
         </form>
         <S.wrapperImage>

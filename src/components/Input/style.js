@@ -10,7 +10,6 @@ export const InputStyled = styled.input`
   border-bottom: 1px solid #c5c5c5;
   outline: none;
   font-size: 13px;
-  letter-spacing: 5px;
 `;
 
 export const LabelIcon = styled.div`

@@ -46,19 +46,20 @@ const Login = () => {
           <Input
             type="text"
             name="username"
-            placeholder="Username or e-mail"
+            placeholder="Usuario ou email"
             primary
             onChange={onChange}
           />
           <Input
             type="password"
             name="password"
-            placeholder="Password"
+            placeholder="Senha"
             onChange={onChange}
           />
           <Button>Login</Button>
           <p>
-            Don’t have an account yet ?<a href="/cadastro"> Sign up!</a>
+            Você ainda não tem um conta ?
+            <a href="/cadastro"> Cadastra-se aqui!</a>
           </p>
         </form>
         <S.wrapperImage>

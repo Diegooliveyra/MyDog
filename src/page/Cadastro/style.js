@@ -30,6 +30,11 @@ export const form = styled.div`
   justify-content: space-between;
   align-items: center;
 
+  h1 {
+    margin-top: 3.5rem;
+    font-size: 2rem;
+  }
+
   @media (max-width: 40rem) {
     min-height: 100vh;
     min-width: 100%;
