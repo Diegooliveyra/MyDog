@@ -1,5 +1,8 @@
+<p align="center">
 <img src=".github/logo.svg" alt="react"/>
-</br></br>
+</p>
+
+<br/>
 
 ## ℹ️ Sobre o projeto
 
