@@ -10,7 +10,7 @@ O projeto foi desenvolvido para um projeto que tem como tema um app de acompanha
 </br>
 <img src="./.github/layout.png">
 </br>
-Você pode conferir o resultado final em: https://ranek-store.netlify.app/
+
 
 ## 🎯 Objetivo do projeto
 
